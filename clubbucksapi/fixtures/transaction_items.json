@@ -1,0 +1,10 @@
+[
+    {
+        "model": "clubbucksapi.transactionitem",
+        "pk": 1,
+        "fields": {
+            "transaction": 1,
+            "item": 1
+        }
+    }
+]

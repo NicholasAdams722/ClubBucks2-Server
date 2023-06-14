@@ -1,0 +1,13 @@
+[
+    {
+        "model": "clubbucksapi.student",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "teacher": 1,
+            "age": 10,
+            "grade_level": 5,
+            "balance": 20
+        }
+    }
+]

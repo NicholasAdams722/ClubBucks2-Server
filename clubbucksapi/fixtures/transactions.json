@@ -1,0 +1,11 @@
+[
+    {
+        "model": "clubbucksapi.transaction",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "created_on": "2023-06-13T13:24:27.172Z",
+            "completed_on": "2023-06-13T14:24:27.172Z"
+        }
+    }
+]

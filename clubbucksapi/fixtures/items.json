@@ -1,0 +1,124 @@
+
+[
+    {
+        "model": "clubbucksapi.item",
+        "pk": 1,
+        "fields": {
+            "name": "pencil pack",
+            "item_type": 1,
+            "description": "Fun, colorful pencils",
+            "price": 5,
+            "image": "path/to/notebook-set.jpg",
+            "quantity": 15 
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 2,
+        "fields": {
+            "name": "Notebook Set",
+            "item_type": 1,
+            "description": "Set of 3 colorful notebooks",
+            "price": 10,
+            "image": "path/to/notebook-set.jpg",
+            "quantity": 20
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 3,
+        "fields": {
+            "name": "Eraser Pack",
+            "item_type": 1,
+            "description": "Pack of 5 erasers",
+            "price": 3,
+            "image": "path/to/eraser-pack.jpg",
+            "quantity": 30
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 4,
+        "fields": {
+            "name": "Colorful Pens",
+            "item_type": 1,
+            "description": "Set of 10 vibrant pens",
+            "price": 8,
+            "image": "path/to/colorful-pens.jpg",
+            "quantity": 25
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 5,
+        "fields": {
+            "name": "Math Set",
+            "item_type": 1,
+            "description": "Geometry compass, ruler, and protractor",
+            "price": 6,
+            "image": "path/to/math-set.jpg",
+            "quantity": 15
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 6,
+        "fields": {
+            "name": "Sticky Note Pack",
+            "item_type": 1,
+            "description": "Set of sticky notes in various sizes",
+            "price": 4,
+            "image": "path/to/sticky-note-pack.jpg",
+            "quantity": 12
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 7,
+        "fields": {
+            "name": "Chocolate Bar",
+            "item_type": 2,
+            "description": "Delicious milk chocolate bar",
+            "price": 2,
+            "image": "path/to/chocolate-bar.jpg",
+            "quantity": 50
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 8,
+        "fields": {
+            "name": "Gummy Bears",
+            "item_type": 2,
+            "description": "Sweet and chewy gummy bears",
+            "price": 1.5,
+            "image": "path/to/gummy-bears.jpg",
+            "quantity": 40
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 9,
+        "fields": {
+            "name": "Sour Patch Kids",
+            "item_type": 2,
+            "description": "Tangy and sour gummy candies",
+            "price": 1.75,
+            "image": "path/to/sour-patch-kids.jpg",
+            "quantity": 35
+        }
+    },
+    {
+        "model": "clubbucksapi.item",
+        "pk": 10,
+        "fields": {
+            "name": "Lollipop Assortment",
+            "item_type": 2,
+            "description": "Assorted flavors of colorful lollipops",
+            "price": 1.25,
+            "image": "path/to/lollipop-assortment.jpg",
+            "quantity": 30
+        }
+    }
+
+]

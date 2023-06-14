@@ -1,0 +1,72 @@
+[
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 1,
+        "fields": {
+            "item_type": "School Supplies"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 2,
+        "fields": {
+            "item_type": "Candy"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 3,
+        "fields": {
+            "item_type": "Perks"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 4,
+        "fields": {
+            "item_type": "Swag"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 5,
+        "fields": {
+            "item_type": "Snacks/Beverages"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 6,
+        "fields": {
+            "item_type": "School Spirit Items"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 7,
+        "fields": {
+            "item_type": "Arts and Crafts"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 8,
+        "fields": {
+            "item_type": "Technology"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 9,
+        "fields": {
+            "item_type": "Sports Equipment"
+        }
+    },
+    {
+        "model": "clubbucksapi.itemtype",
+        "pk": 10,
+        "fields": {
+            "item_type": "Miscellaneous"
+        }
+    }
+]
