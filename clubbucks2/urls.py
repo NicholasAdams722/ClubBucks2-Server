@@ -22,11 +22,17 @@ from rest_framework import routers
 from clubbucksapi.views import StudentView
 from clubbucksapi.views import ItemView
 from clubbucksapi.views import ItemTypeView
+from clubbucksapi.views import TransactionView
+from clubbucksapi.views import TransactionItemView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'students', StudentView, 'student')
 router.register(r'items', ItemView, 'item')
 router.register(r'item_types', ItemTypeView, 'item_type')
+router.register(r'transactions', TransactionView, 'transaction')
+router.register(r'transaction_items', TransactionItemView, 'transaction_item')
+
+
 
 urlpatterns = [
     path('register', register_user),
