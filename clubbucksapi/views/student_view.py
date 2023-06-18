@@ -4,6 +4,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from clubbucksapi.models import Student
+from django.contrib.auth.models import User
 
 
 class StudentView(ViewSet):
@@ -30,6 +31,27 @@ class StudentView(ViewSet):
         student = Student.objects.get(pk=pk)
         serialized = StudentSerializer(student)
         return Response(serialized.data, status=status.HTTP_200_OK)
+    
+    #TODO Create PUT request to edit student balances
+
+    def update(self, request, pk):
+        """Handle PUT requests for a game
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+
+        student = Student.objects.get(pk=pk)
+
+        #! How would I access student name?
+        student.age = request.data["age"]
+        student.grade_level = request.data["grade_level"]
+        student.balance = request.data["balance"]
+        student.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    # complete and test a destroy function for an item
 
 
 class StudentSerializer(serializers.ModelSerializer):
