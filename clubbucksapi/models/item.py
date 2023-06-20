@@ -6,4 +6,4 @@ class Item(models.Model):
     description = models.CharField(max_length=255)
     price = models.IntegerField()
     image = models.ImageField(upload_to='item_images')
-    quantity = models.IntegerField()
+    quantity = models.IntegerField() 

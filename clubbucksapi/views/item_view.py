@@ -4,6 +4,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from clubbucksapi.models import Item, ItemType
+from django.contrib.auth.models import User
 
 
 class ItemView(ViewSet):
@@ -16,6 +17,8 @@ class ItemView(ViewSet):
             Response -- JSON serialized list of items
         """
 
+        # user = User.objects.get(id= request.auth.user.id)
+        # items = Item.objects.get(user_id=user.id)
         items = Item.objects.all()
         serialized = ItemSerializer(items, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
