@@ -51,7 +51,13 @@ class StudentView(ViewSet):
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    # complete and test a destroy function for an item
+    # complete and test a destroy function for a student
+
+    def destroy(self, request, pk):
+        student = Student.objects.get(pk=pk)
+        student.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
 
 
 class StudentSerializer(serializers.ModelSerializer):
@@ -59,3 +65,4 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = ('id', 'user', 'age', 'grade_level', 'balance')
+        depth: 1
