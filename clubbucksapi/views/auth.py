@@ -70,13 +70,21 @@ def register_user(request):
             # Use the REST Framework's token generator on the new user account
             token = Token.objects.create(user=student.user)
             # Return the token to the client
-            data = { 'token': token.key }
+            data = {
+                    'valid': True,
+                    'token': token.key,
+                    'staff': new_user.is_staff
+                     }
             return Response(data)
     
         else:
             token = Token.objects.create(user=new_user)
             # Return the token to the client
-            data = { 'token': token.key }
+            data = {
+                    'valid': True,
+                    'token': token.key,
+                    'staff': new_user.is_staff 
+                    }
             return Response(data)  # Add a response here for staff users
     except Exception as error:
         data = {'error': str(error)}  # Return an error response in case of exception
