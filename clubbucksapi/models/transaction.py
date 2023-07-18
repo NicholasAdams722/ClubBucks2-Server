@@ -7,3 +7,5 @@ class Transaction(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     total_amount = models.IntegerField(default=0)
     item = models.ManyToManyField("Item", through="TransactionItem")
+
+    

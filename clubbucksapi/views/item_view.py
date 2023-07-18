@@ -3,9 +3,9 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from clubbucksapi.models import Item, ItemType
+from clubbucksapi.models import Item, ItemType, Transaction
 from django.contrib.auth.models import User
-
+from rest_framework.decorators import action
 
 class ItemView(ViewSet):
     """Honey Rae API items view"""
@@ -84,6 +84,18 @@ class ItemView(ViewSet):
         item = Item.objects.get(pk=pk)
         item.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    @action(methods=['post'], detail=True)
+    def add_to_order(self, request, pk):
+        """Add a product to the current users open order"""
+        try:
+            item = Item.objects.get(pk=pk)
+            order, _ = Transaction.objects.get_or_create(
+                user=request.auth.user, completed_on=None, payment_type=None)
+            order.items.add(item)
+            return Response({'message': 'product added'}, status=status.HTTP_201_CREATED)
+        except Item.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
 class ItemSerializer(serializers.ModelSerializer):
