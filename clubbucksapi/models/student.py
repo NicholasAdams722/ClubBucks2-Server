@@ -7,3 +7,7 @@ class Student(models.Model):
     age = models.IntegerField()
     grade_level = models.IntegerField()
     balance = models.IntegerField()
+
+    @property 
+    def full_name(self):
+        return f'{self.user.first_name} {self.user.last_name}'

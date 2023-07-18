@@ -64,5 +64,5 @@ class StudentSerializer(serializers.ModelSerializer):
     """JSON serializer for students"""
     class Meta:
         model = Student
-        fields = ('id', 'user', 'age', 'grade_level', 'balance')
+        fields = ('id', 'user', 'age', 'grade_level', 'balance', 'full_name')
         depth: 1
